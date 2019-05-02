@@ -1,0 +1,114 @@
+<!--
+/*
+ * CREATED BY
+ *
+ * Jesus 'Pokoi' Villar
+ * © pokoidev 2019 (pokoidev.com)
+ *
+ * Creative Commons License:
+ * Attribution 4.0 International (CC BY 4.0)
+ *
+ */
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pokode by pokoidev</title>
+    <author> Pokoidev </author>
+
+    <link rel="stylesheet" href="css/titleBar.css">
+    <link rel="stylesheet" href="css/snippetStyle.css">
+
+    <script type= "text/javascript" src="js/ace.js"> </script>
+    <script type= "text/javascript" src="js/mode-javascript.js"> </script>
+    <script type= "text/javascript" src="js/theme-tomorrow_night.js"> </script>
+
+    <style type="text/css" media="screen">
+      #editor {
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    </style>
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="titleBar titleBarStyle ">
+
+          <div class="windowTitle preventSelect draggable"> POKODE </div>
+          <div class="windowControls windowControlsStyle preventSelect">
+              <button id="minimise">-</button>
+              <button id="maximise">🗖</button>
+              <button id="quit">x</button>
+          </div>
+
+      </div>
+
+      <div class="codingScreen codingScreenStyles">
+
+          <div class="explorerContainer explorerContainerStyles">
+
+              <div class="filesContainer">
+                  <li>
+                    <span class="closeTabIcon">x</span>
+                    <div class="fileNameSpan">Untitled Text</div>
+                  </li>
+              </div>
+
+              <div class="folderFiles">
+                  <div class="folderTitle">
+                      <div id="folderName">Folder</div>
+                      <button id="syncFiles">Refresh</button>
+                      <button id="changeFolder">Change</button>
+                  </div>
+                  <div class="exploredFilesContainer">
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="editorContainer">
+
+              <div id="editor"> function foo(items) {
+                    var x = "All this is syntax highlighted";
+                    return x;
+                    }
+              </div>
+              <div class="codeStat">
+                  <div class="currentLang">JAVASCRIPT</div>
+              </div>
+
+          </div>
+
+          <div class="widgetsContainer widgetsContainerStyles">
+
+              <div class="widgetsDrawer">
+                  <button id="github"></button>
+                  <button id="esne"></button>
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+    <script src="js/titleBarStuff.js"></script>
+    <script src="js/index.js"> </script>
+    <script>
+      var editor = ace.edit("editor");
+      editor.setTheme("ace/theme/tomorrow_night");
+      editor.session.setMode("ace/mode/javascript");
+      editor.setOptions({enableBasicAutocompletion: true});
+    </script>
+
+  </body>
+</html>
