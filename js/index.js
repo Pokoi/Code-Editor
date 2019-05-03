@@ -9,11 +9,4 @@
  *
  */
 
-const index_remote = require('electron').remote       ;
-const main         = index_remote.require('./main.js');
-
-let githubButton   = document.getElementById('github');
-let esneButton     = document.getElementById('esne')  ;
-
-githubButton.addEventListener('click', () => {main.openWindow("https://github.com/")});
-esneButton.  addEventListener('click', () =>{main.openWindow("https://esnet.esne.es/ESNE_A01/usr_login.aspx")});
+//Implementar aquí la conexión con main.js para crear las ventanas auxiliares
